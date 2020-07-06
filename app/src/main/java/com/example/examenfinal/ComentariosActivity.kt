@@ -33,8 +33,7 @@ class ComentariosActivity : AppCompatActivity() {
                     if(response.isSuccessful) {
 
                         val comentario : List<PostReponse>? = response.body()
-                        /*if( comentario != null) updateInfo(comentario)
-                    }else{*/
+
                         Toast.makeText(this@ComentariosActivity, "Error ${response.code()}", Toast.LENGTH_LONG).show()
                     }
                 }catch (e : HttpException) {
@@ -51,12 +50,6 @@ class ComentariosActivity : AppCompatActivity() {
 
 
         tv_feed_item_body.text = comentario.coment
-        /*profile_years.text = user.age
-        profile_location.text = user.location
-        profile_occupation.text = user.occupation
-        profile_likes.text = user.social.likes.toString()
-        profile_posts.text = user.social.posts.toString()
-        profile_shares.text = user.social.shares.toString()
-        profile_friends.text = user.social.shares.toString()*/
+
     }
 }

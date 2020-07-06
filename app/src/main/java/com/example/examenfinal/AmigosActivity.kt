@@ -67,9 +67,6 @@ class AmigosActivity : AppCompatActivity() {
 
         val amigoString : String = Gson().toJson(item, AmigosReponse::class.java)
         Log.d("GSON Class to String", amigoString )
-        /**
-         * puedes enviar los extras a una pantalla de detalle
-         */
 
 
         val user : AmigosReponse = Gson().fromJson(amigoString, AmigosReponse::class.java)

@@ -26,10 +26,10 @@ class FeedActivity : AppCompatActivity(), PostAdapter.PostHolder.OnAdapterListen
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feed)
 
-        /*btn_feed_item_comment.setOnClickListener{view ->
+        btn_feed_item_comment.setOnClickListener{view ->
             val intent = Intent(this, ComentariosActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         adapter = PostAdapter(ArrayList(), this)
         linearLayoutManager = LinearLayoutManager(this)
@@ -70,13 +70,11 @@ class FeedActivity : AppCompatActivity(), PostAdapter.PostHolder.OnAdapterListen
 
     //GSON
     override fun onItemClickListener(item: PostReponse) {
-        //Toast.makeText(this, "Click item  ${item.id} con usuario: ${item.username}", Toast.LENGTH_LONG).show()
+
 
         val postString : String = Gson().toJson(item, PostReponse::class.java)
         Log.d("GSON Class to String", postString )
-        /**
-         * puedes enviar los extras a una pantalla de detalle
-         */
+
 
 
         val post : PostReponse = Gson().fromJson(postString, PostReponse::class.java)

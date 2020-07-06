@@ -33,12 +33,6 @@ class PostAdapter(private var data: List<PostReponse>, private val listener: Pos
         holder.itemView.tv_feed_item_description.text = post.body
         holder.itemView.tv_feed_item_likes.text = post.likes.toString()
 
-        /*if (!post.user_image.isBlank()){
-            Picasso.get().load(post.user_image)
-        }
-        holder.itemView.iv_feed_foto_comment
-        holder.itemView.tv_feed_item_body.text=post.likes.toString()*/
-
 
 
 
